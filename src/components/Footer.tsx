@@ -26,7 +26,7 @@ export function Footer() {
             <div className="max-w-6xl mx-auto px-4 py-8">
                 <div className="flex justify-between items-center">
                     <p className="text-gray-600">
-                        © {new Date().getFullYear()} NUU Cognition. All rights reserved.
+                        © {new Date().getFullYear()} nuu cognition. All rights reserved.
                     </p>
                     <div className="flex gap-4">
                         {socialLinks.map((link) => (

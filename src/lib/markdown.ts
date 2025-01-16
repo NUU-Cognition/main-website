@@ -55,7 +55,7 @@ export async function getArticleContent(slug: string) {
             },
             content
         }
-    } catch (error) {
+    } catch {
         throw new Error(`Failed to load article with slug: ${slug}`)
     }
 }

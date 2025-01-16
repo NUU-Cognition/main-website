@@ -2,7 +2,7 @@
 
 import {ArticleCard} from '@/components/ArticleCard';
 import {SearchBar} from '@/components/SearchBar';
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import type {ArticleMetadata} from '@/lib/markdown';
 
 export default function Library({
@@ -10,11 +10,10 @@ export default function Library({
                                 }: {
     initialArticles: ArticleMetadata[]
 }) {
-    const [articles, setArticles] = useState<ArticleMetadata[]>(initialArticles);
     const [filteredArticles, setFilteredArticles] = useState<ArticleMetadata[]>(initialArticles);
 
     const handleSearch = (query: string) => {
-        const filtered = articles.filter((article) => {
+        const filtered = initialArticles.filter((article) => {
             const searchContent = `${article.title} ${article.description}`.toLowerCase();
             return searchContent.includes(query.toLowerCase());
         });
