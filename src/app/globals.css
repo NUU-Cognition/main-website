@@ -1,0 +1,36 @@
+/* src/app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --font-sono: 'Sono', monospace;
+}
+
+@layer base {
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-heading;
+    }
+}
+
+/* Add to globals.css */
+.font-mono {
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    letter-spacing: -0.00em;
+}
+
+h1.font-mono {
+    margin-left: -0.1em;
+}
+
+/*!* Optional: Add a specific class for the logo *!*/
+/*.nuu-logo {*/
+/*    font-feature-settings: "kern" 1;*/
+/*    font-kerning: normal;*/
+/*    letter-spacing: -0.01em;*/
+/*}*/
+
+html {
+    scrollbar-gutter: stable;
+}
