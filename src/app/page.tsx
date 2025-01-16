@@ -1,25 +1,15 @@
+import GridGallery from '@/components/GridGallery';
+
 export default function Home() {
     return (
         <div className="max-w-3xl mx-auto px-4 py-16">
-            <h1 className="font-mono text-4xl mb-8">nuu cognition</h1>
-            <p className="text-lg mb-8">
-                Pioneering the integration of advanced cognitive science, technology, and
-                practical implementation methodologies.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h2 className="font-mono text-xl mb-4">nuu learn</h2>
-                    <p className="text-gray-600">Educational services and cognitive enhancement programs.</p>
-                </div>
-                <div>
-                    <h2 className="font-mono text-xl mb-4">nuu library</h2>
-                    <p className="text-gray-600">Knowledge repository and research publications.</p>
-                </div>
-                <div>
-                    <h2 className="font-mono text-xl mb-4">nuu labs</h2>
-                    <p className="text-gray-600">Research and development in cognitive science.</p>
-                </div>
+            <h1 className="font-mono text-4xl mb-8 -mt-6">nuu cognition</h1>
+            <div className="prose lg:prose-xl mb-12">
+                <p className="text-lg text-gray-600 mb-4">
+                    An independent practice exploring software, cognition, and human development.
+                </p>
             </div>
+            <GridGallery/>
         </div>
-    )
+    );
 }

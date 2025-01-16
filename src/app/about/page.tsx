@@ -4,16 +4,20 @@ export default function About() {
             <h1 className="font-mono text-4xl mb-8">about</h1>
             <div className="prose lg:prose-xl">
                 <p className="text-lg mb-6">
-                    NUU Cognition stands at the forefront of cognitive enhancement and
-                    learning acceleration. Our mission is to revolutionize human cognitive
-                    enhancement through the development and implementation of cutting-edge
-                    research, tools, and methodologies.
+                    NUU is an independent research and development practice focused on
+                    the intersection of software engineering, cognitive science, and
+                    human development. Our work combines rigorous exploration with
+                    practical implementation.
                 </p>
                 <p className="text-lg mb-6">
-                    We maintain rigorous scientific standards while ensuring practical
-                    applicability in all our work. Our approach combines advanced cognitive
-                    science with innovative technology to create effective solutions for
-                    learning and cognitive development.
+                    Through careful research and systematic development, we create tools
+                    and frameworks that enhance learning, cognition, and personal growth.
+                    Our approach emphasizes both scientific validity and real-world
+                    applicability.
+                </p>
+                <p className="text-lg">
+                    Currently developing research-based software tools and learning frameworks
+                    while documenting insights and methodologies in our public library.
                 </p>
             </div>
         </div>

@@ -21,7 +21,7 @@
 }
 
 h1.font-mono {
-    margin-left: -0.1em;
+    margin-left: -0.08em;
 }
 
 /*!* Optional: Add a specific class for the logo *!*/
@@ -33,4 +33,29 @@ h1.font-mono {
 
 html {
     scrollbar-gutter: stable;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .hover\:pause:hover {
+        animation-play-state: paused;
+    }
+}
+
+/* Hide or style scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+    height: 8px; /* or display: none; */
+}
+
+.hide-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.hide-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(107, 114, 128, 0.4); /* Tailwind gray-500 with ~40% opacity */
+    border-radius: 4px;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }

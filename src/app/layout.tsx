@@ -19,8 +19,8 @@ const sono = localFont({
 })
 
 export const metadata = {
-    title: 'NUU Cognition',
-    description: 'Cognitive enhancement and learning acceleration',
+    title: 'nuu',
+    description: 'tech x mind',
 }
 
 interface RootLayoutProps {

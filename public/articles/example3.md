@@ -1,5 +1,5 @@
 ---
-title: "Pargraphs"
+title: "Paragraphs"
 date: "2025-01-16"
 description: "We love our lorem ipsum."
 ---

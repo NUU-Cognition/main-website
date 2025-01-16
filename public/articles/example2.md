@@ -1,7 +1,7 @@
 ---
 title: "Hello World"
 date: "2025-01-16"
-description: "An introduction to cognitive enhancement techniques and methodologies."
+description: "Testing various markdown elements."
 ---
 
 ## Text Formatting
