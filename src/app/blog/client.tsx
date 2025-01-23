@@ -3,14 +3,14 @@
 import {ArticleCard} from '@/components/ArticleCard';
 import {SearchBar} from '@/components/SearchBar';
 import {useState} from 'react';
-import type {ArticleMetadata} from '@/lib/markdown';
+import type {BlogPostMetadata} from '@/lib/blog';  // Update the type import
 
-export default function Library({
-                                    initialArticles
-                                }: {
-    initialArticles: ArticleMetadata[]
+export default function BlogPage({
+                                     initialArticles
+                                 }: {
+    initialArticles: BlogPostMetadata[]
 }) {
-    const [filteredArticles, setFilteredArticles] = useState<ArticleMetadata[]>(initialArticles);
+    const [filteredArticles, setFilteredArticles] = useState<BlogPostMetadata[]>(initialArticles);
 
     const handleSearch = (query: string) => {
         const filtered = initialArticles.filter((article) => {
@@ -22,7 +22,7 @@ export default function Library({
 
     return (
         <div className="max-w-3xl mx-auto px-4 py-16">
-            <h1 className="font-mono text-4xl mb-8">library</h1>
+            <h1 className="font-mono text-4xl mb-8">blog</h1>
             <SearchBar onSearch={handleSearch}/>
             <div className="grid gap-8">
                 {filteredArticles.length > 0 ? (

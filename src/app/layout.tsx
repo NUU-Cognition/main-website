@@ -19,8 +19,13 @@ const sono = localFont({
 })
 
 export const metadata = {
-    title: 'nuu',
-    description: 'tech x mind',
+    title: 'nuu cognition',
+    description: 'An independent practice exploring software, cognition, and human development.',
+    icons: {
+        icon: [
+            {url: '/favicon.ico', sizes: 'any'},
+        ],
+    },
 }
 
 interface RootLayoutProps {

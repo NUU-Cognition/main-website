@@ -1,4 +1,4 @@
-import {Twitter, Mail} from 'lucide-react';
+import {Twitter, Mail, LinkedinIcon} from 'lucide-react';
 import Link from 'next/link';
 
 type SocialLink = {
@@ -9,6 +9,11 @@ type SocialLink = {
 
 const socialLinks: SocialLink[] = [
     {
+        icon: LinkedinIcon,
+        href: 'https://www.linkedin.com/company/nuu-cognition',
+        label: 'Connect with us on LinkedIn'
+    },
+    {
         icon: Twitter,
         href: 'https://twitter.com/nuu_cognition',
         label: 'Follow us on X (Twitter)'
@@ -17,7 +22,7 @@ const socialLinks: SocialLink[] = [
         icon: Mail,
         href: 'mailto:nuucognition@gmail.com',
         label: 'Email us'
-    }
+    },
 ];
 
 export function Footer() {
@@ -26,7 +31,7 @@ export function Footer() {
             <div className="max-w-6xl mx-auto px-4 py-8">
                 <div className="flex justify-between items-center">
                     <p className="text-gray-600">
-                        © {new Date().getFullYear()} nuu cognition. All rights reserved.
+                        © {new Date().getFullYear()} NUU Cognition. All rights reserved.
                     </p>
                     <div className="flex gap-4">
                         {socialLinks.map((link) => (

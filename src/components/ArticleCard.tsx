@@ -1,10 +1,11 @@
+// src/components/ArticleCard.tsx
 import Link from 'next/link'
-import type {ArticleMetadata} from '@/lib/markdown'
+import type {BlogPostMetadata} from '@/lib/blog'
 
-export function ArticleCard({article}: { article: ArticleMetadata }) {
+export function ArticleCard({article}: { article: BlogPostMetadata }) {
     return (
         <article className="border-b pb-8">
-            <Link href={`/library/${article.slug}`} className="block group">
+            <Link href={`/blog/${article.slug}`} className="block group">
                 <h2 className="font-mono text-2xl mb-4 group-hover:text-gray-600">
                     {article.title}
                 </h2>
