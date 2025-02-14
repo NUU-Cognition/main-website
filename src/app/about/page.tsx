@@ -4,21 +4,14 @@ export default function About() {
             <h1 className="font-mono text-4xl mb-8">about</h1>
             <div className="prose lg:prose-xl">
                 <p className="text-lg mb-6">
-                    Our goal is to better understand the human mind. And with that understanding, find more effective
-                    ways to develop, use, and augment it. This pursuit sits comfortably at the intersection between
+                    Our goal is to better understand the human mind, and with that understanding, innovate effective
+                    methods to develop, use, and augment it. This pursuit sits comfortably at the intersection between
                     learning (developing), cognition (using), and technology (augmenting).
                 </p>
                 <p className="text-lg mb-6">
-                    As an organization, we are not quite a research lab. While traditional academic research is
-                    invaluable, we believe there are other effective methods to advance knowledge. At the same time, we
-                    are not a traditional start-up. Our primary focus will always be doing the work instead of running a
-                    business. Yet part of the work is in validating, and there is no better way to validate an idea than
-                    to test it in the market.
-                </p>
-                <p className="text-lg mb-6">
-                    NUU Cognition is best described as an umbrella platform for all the work we do in this space. We
-                    think our approach is unique given our specific domain, and hope it can give rise to innovation. For
-                    example, software that is truly theory first or theory that iterates in real time.
+                    NUU Cognition is an innovation lab, building on research through rapid iteration, testing and
+                    validation. We aim to translate insights into practical methods, products, and services that
+                    meaningfully enhance human capabilities.
                 </p>
             </div>
         </div>
