@@ -33,17 +33,18 @@ export default function Tools() {
                     <h2 className="text-2xl font-semibold text-foreground mb-8">Coming Soon</h2>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <FutureProductCard
-                            title="NUU Echo"
-                            subtitle="Audio Intelligence"
-                            description="Transform how you consume and process audio content. Echo brings clarity to podcasts, lectures, and conversations through intelligent processing."
-                            status="in-development"
-                        />
-                        
+
                         <FutureProductCard
                             title="NUU Transform"
                             subtitle="Media Conversion"
                             description="Seamlessly convert information between different mediums while preserving meaning and enhancing understanding."
+                            status="in-development"
+                        />
+
+                        <FutureProductCard
+                            title="NUU Echo"
+                            subtitle="Audio Intelligence"
+                            description="Transform how you consume and process audio content. Echo brings clarity to podcasts, lectures, and conversations through intelligent processing."
                             status="coming-soon"
                         />
                         

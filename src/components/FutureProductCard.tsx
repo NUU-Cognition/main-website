@@ -29,7 +29,7 @@ export function FutureProductCard({
     <div className={cn(
       "relative bg-white border border-black/10 rounded-[4px] p-6 md:p-8",
       "transition-all duration-200 ease-out",
-      "hover:border-black/20 hover:scale-[1.02]",
+      "hover:border-black/20",
       "group",
       className
     )}>
