@@ -13,7 +13,7 @@ export default function About() {
                     </p>
                     
                     <p>
-                        NUU Cognition is an innovation lab, building on research through rapid iteration, 
+                        NUU Cognition is an engineering lab, building on research through rapid iteration, 
                         testing and validation. We aim to translate insights into practical methods, 
                         products, and services that meaningfully enhance human capabilities.
                     </p>

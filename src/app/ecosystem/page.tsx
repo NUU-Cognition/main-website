@@ -7,7 +7,15 @@ export default function Ecosystem() {
     return (
         <div className="min-h-screen bg-background">
             {/* Hero Section - Full Height */}
-            <section className="min-h-screen flex items-center">
+            <section className="min-h-screen flex items-center relative">
+                {/* Preview Banner - positioned to account for navbar */}
+                <div className="absolute top-16 left-0 right-0 bg-soft-gray border-y border-black/10 z-40">
+                    <div className="max-w-6xl mx-auto px-6 py-3">
+                        <p className="text-sm text-center text-foreground/60">
+                            <span className="font-medium">Preview:</span> This ecosystem is currently in development. Join our waitlist to get early access.
+                        </p>
+                    </div>
+                </div>
                 <div className="max-w-6xl mx-auto px-6 py-24">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         {/* Left copy */}
@@ -37,9 +45,9 @@ export default function Ecosystem() {
                         
                         {/* Right benefit box */}
                         <aside className="lg:pl-12">
-                            <div className="bg-white border border-black/10 rounded-[4px] p-10">
+                            <div className="bg-white border border-black/10 rounded-[4px] p-10 relative">
                                 <h3 className="text-sm font-medium text-foreground/40 uppercase tracking-wider mb-6">
-                                    Why an Ecosystem?
+                                    Our Vision
                                 </h3>
                                 
                                 <ul className="space-y-4">
@@ -75,7 +83,10 @@ export default function Ecosystem() {
 
                 {/* Core Systems */}
                 <section id="systems">
-                    <p className="text-sm font-medium text-foreground/40 uppercase tracking-wider mb-8">Core Systems</p>
+                    <div className="flex items-center gap-3 mb-8">
+                        <p className="text-sm font-medium text-foreground/40 uppercase tracking-wider">Planned Systems</p>
+                        <span className="text-xs bg-soft-gray px-2 py-1 rounded-full text-foreground/50">In Development</span>
+                    </div>
                     
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                         <SystemCard
@@ -244,59 +255,34 @@ export default function Ecosystem() {
                     </div>
                 </section>
 
-                {/* Getting Started */}
+                {/* Join the Waitlist */}
                 <section className="border-t border-border/50 pt-16">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                        <div>
-                            <h2 className="text-2xl font-semibold text-foreground mb-6">
-                                Start Your Journey
-                            </h2>
-                            <p className="text-foreground/70 mb-8 leading-relaxed">
-                                Begin with any tool that solves your immediate need. As your requirements grow, 
-                                add more components. The ecosystem scales with you, from personal note-taking 
-                                to enterprise knowledge management.
-                            </p>
-                            <div className="flex gap-4">
-                                <a 
-                                    href="/tools"
-                                    className="inline-flex items-center gap-2 px-6 py-2.5 bg-foreground text-background rounded-full text-sm font-medium hover:bg-foreground/90 transition"
-                                >
-                                    Explore Tools
-                                    <ArrowRight className="w-4 h-4" />
-                                </a>
-                                <a 
-                                    href="/about"
-                                    className="inline-flex items-center gap-2 px-6 py-2.5 border border-foreground/20 rounded-full text-sm font-medium hover:border-foreground/40 transition"
-                                >
-                                    Learn More
-                                </a>
-                            </div>
+                    <div className="text-center max-w-2xl mx-auto">
+                        <h2 className="text-3xl font-semibold text-foreground mb-4">
+                            Be Part of the Future
+                        </h2>
+                        <p className="text-foreground/70 mb-8 leading-relaxed">
+                            The NUU Ecosystem is currently in development. Join our waitlist to get early access 
+                            to these tools as they launch and help shape the future of cognitive augmentation.
+                        </p>
+                        <div className="flex gap-4 justify-center">
+                            <a 
+                                href="https://forms.gle/your-waitlist-form"
+                                className="inline-flex items-center gap-2 px-6 py-2.5 bg-foreground text-background rounded-full text-sm font-medium hover:bg-foreground/90 transition"
+                            >
+                                Join Waitlist
+                                <ArrowRight className="w-4 h-4" />
+                            </a>
+                            <a 
+                                href="/tools"
+                                className="inline-flex items-center gap-2 px-6 py-2.5 border border-foreground/20 rounded-full text-sm font-medium hover:border-foreground/40 transition"
+                            >
+                                Try NUU Surf Now
+                            </a>
                         </div>
-                        <div className="flex items-center">
-                            <div className="w-full bg-white border border-black/10 rounded-[4px] p-8">
-                                <p className="text-sm font-medium text-foreground/40 uppercase tracking-wider mb-4">
-                                    Quick Start
-                                </p>
-                                <ul className="space-y-3">
-                                    <li className="flex items-center gap-3">
-                                        <span className="text-sm font-medium text-foreground">1.</span>
-                                        <span className="text-sm text-foreground/70">Choose a tool that fits your workflow</span>
-                                    </li>
-                                    <li className="flex items-center gap-3">
-                                        <span className="text-sm font-medium text-foreground">2.</span>
-                                        <span className="text-sm text-foreground/70">Install locally or access via browser</span>
-                                    </li>
-                                    <li className="flex items-center gap-3">
-                                        <span className="text-sm font-medium text-foreground">3.</span>
-                                        <span className="text-sm text-foreground/70">Start creating in markdown</span>
-                                    </li>
-                                    <li className="flex items-center gap-3">
-                                        <span className="text-sm font-medium text-foreground">4.</span>
-                                        <span className="text-sm text-foreground/70">Add more tools as needed</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        <p className="text-xs text-foreground/40 mt-6">
+                            While you wait, explore NUU Surf — our first tool that's available today.
+                        </p>
                     </div>
                 </section>
             </div>
