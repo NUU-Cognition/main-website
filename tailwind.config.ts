@@ -13,6 +13,7 @@ const config: Config = {
                 // Minimal palette
                 'pure-white': '#FFFFFF',
                 'soft-white': '#FAFAFA',
+                'soft-gray': '#F8F8F8',
                 'pearl': '#F7F7F7',
                 'mist': '#F0F0F0',
                 'smoke': '#E8E8E8',
