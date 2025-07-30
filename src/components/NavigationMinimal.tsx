@@ -3,7 +3,7 @@
 import * as React from "react"
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, ExternalLink } from 'lucide-react'
 import { cn } from "@/lib/utils"
 
 export function NavigationMinimal() {
@@ -18,7 +18,7 @@ export function NavigationMinimal() {
         { href: '/', label: 'home' },
         { href: '/about', label: 'about' },
         { href: '/tools', label: 'tools' },
-        { href: '/blog', label: 'blog' },
+        { href: 'https://library.nuucognition.com', label: 'library', external: true },
     ]
 
     return (
@@ -33,18 +33,31 @@ export function NavigationMinimal() {
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center space-x-8">
                         {navItems.map((item) => (
-                            <Link
-                                key={item.href}
-                                href={item.href}
-                                className={cn(
-                                    "text-sm font-medium transition-all duration-200",
-                                    pathname === item.href 
-                                        ? "text-foreground" 
-                                        : "text-foreground/50 hover:text-foreground"
-                                )}
-                            >
-                                {item.label.charAt(0).toUpperCase() + item.label.slice(1)}
-                            </Link>
+                            item.external ? (
+                                <a
+                                    key={item.href}
+                                    href={item.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-sm font-medium text-foreground/50 hover:text-foreground transition-all duration-200 flex items-center gap-1"
+                                >
+                                    {item.label.charAt(0).toUpperCase() + item.label.slice(1)}
+                                    <ExternalLink size={12} />
+                                </a>
+                            ) : (
+                                <Link
+                                    key={item.href}
+                                    href={item.href}
+                                    className={cn(
+                                        "text-sm font-medium transition-all duration-200",
+                                        pathname === item.href 
+                                            ? "text-foreground" 
+                                            : "text-foreground/50 hover:text-foreground"
+                                    )}
+                                >
+                                    {item.label.charAt(0).toUpperCase() + item.label.slice(1)}
+                                </Link>
+                            )
                         ))}
                     </div>
 
@@ -64,19 +77,33 @@ export function NavigationMinimal() {
                 <div className="md:hidden border-t border-border/50 bg-background/95 backdrop-blur-sm">
                     <div className="px-6 py-4 space-y-3">
                         {navItems.map((item) => (
-                            <Link
-                                key={item.href}
-                                href={item.href}
-                                className={cn(
-                                    "block text-sm font-medium transition-all duration-200",
-                                    pathname === item.href 
-                                        ? "text-foreground" 
-                                        : "text-foreground/50"
-                                )}
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                {item.label.charAt(0).toUpperCase() + item.label.slice(1)}
-                            </Link>
+                            item.external ? (
+                                <a
+                                    key={item.href}
+                                    href={item.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-1 text-sm font-medium text-foreground/50 transition-all duration-200"
+                                    onClick={() => setIsMenuOpen(false)}
+                                >
+                                    {item.label.charAt(0).toUpperCase() + item.label.slice(1)}
+                                    <ExternalLink size={12} />
+                                </a>
+                            ) : (
+                                <Link
+                                    key={item.href}
+                                    href={item.href}
+                                    className={cn(
+                                        "block text-sm font-medium transition-all duration-200",
+                                        pathname === item.href 
+                                            ? "text-foreground" 
+                                            : "text-foreground/50"
+                                    )}
+                                    onClick={() => setIsMenuOpen(false)}
+                                >
+                                    {item.label.charAt(0).toUpperCase() + item.label.slice(1)}
+                                </Link>
+                            )
                         ))}
                     </div>
                 </div>

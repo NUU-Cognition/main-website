@@ -5,22 +5,22 @@ export default function Home() {
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium mb-8 tracking-tight">
                     NUU Cognition
                 </h1>
-                <p className="text-lg md:text-xl text-foreground/60 mb-16 leading-relaxed max-w-xl mx-auto">
+                <p className="text-lg md:text-xl text-foreground/60 mb-12 leading-relaxed max-w-xl mx-auto">
                     Thinking tools for everyone.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
                     <a 
                         href="/about" 
-                        className="px-8 py-3 border border-black font-medium text-sm hover:bg-black hover:text-white transition-all duration-200 rounded-full"
+                        className="px-6 py-2.5 border border-black/70 font-medium text-sm hover:bg-black hover:text-white hover:scale-105 transition-all duration-200 rounded-full inline-block"
                     >
                         Learn more
                     </a>
                     <a 
                         href="/tools" 
-                        className="px-8 py-3 bg-black text-white font-medium text-sm hover:bg-black/90 transition-all duration-200 rounded-full"
+                        className="px-6 py-2.5 bg-black text-white font-medium text-sm hover:bg-black/85 hover:scale-105 transition-all duration-200 rounded-full inline-block shadow-sm hover:shadow-md"
                     >
-                        Our tools
+                        Explore our thinking tools
                     </a>
                 </div>
             </div>
