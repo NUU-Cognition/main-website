@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { Menu, X, ExternalLink } from 'lucide-react'
 import { cn } from "@/lib/utils"
@@ -26,8 +27,14 @@ export function NavigationMinimal() {
             <div className="max-w-6xl mx-auto px-6">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}
-                    <Link href="/" className="text-base font-medium">
-                        NUU
+                    <Link href="/" className="flex items-center">
+                        <Image 
+                            src="/logo.svg" 
+                            alt="NUU Cognition Logo" 
+                            width={30} 
+                            height={30}
+                            className="h-6 w-6"
+                        />
                     </Link>
 
                     {/* Desktop Navigation */}

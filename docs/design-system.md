@@ -178,14 +178,19 @@ NUU Surf, NUU Echo, etc.
 /* Filled button for primary actions */
 background: black;
 color: white;
-padding: 10px 24px;
+padding: 10px 24px;          /* px-6 py-2.5 */
 border-radius: 9999px;        /* Fully rounded */
 font-weight: 500;
 font-size: 14px;
 transition: all 200ms ease;
+box-shadow: 0 1px 2px rgba(0,0,0,0.05); /* shadow-sm */
 
 /* Hover */
-background: rgba(0,0,0,0.8);
+background: transparent;
+color: black;
+border: 1px solid rgba(0,0,0,0.7);
+transform: scale(1.05);
+box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* shadow-md */
 ```
 
 #### Secondary Button
@@ -193,8 +198,8 @@ background: rgba(0,0,0,0.8);
 /* Outlined button for secondary actions */
 background: transparent;
 color: black;
-border: 1px solid rgba(0,0,0,0.8);
-padding: 10px 24px;
+border: 1px solid rgba(0,0,0,0.7);  /* border-black/70 */
+padding: 10px 24px;                  /* px-6 py-2.5 */
 border-radius: 9999px;
 font-weight: 500;
 font-size: 14px;
@@ -203,26 +208,33 @@ transition: all 200ms ease;
 /* Hover */
 background: black;
 color: white;
+transform: scale(1.05);
 ```
 
 ### Navigation
 
 ```css
-/* Fixed header with backdrop blur */
-position: fixed;
+/* Absolute positioned navigation */
+position: absolute;
 top: 0;
-background: rgba(255,255,255,0.8);
-backdrop-filter: blur(8px);
-height: 64px;
+left: 0;
+right: 0;
+z-index: 50;
 
 /* Navigation items */
-font-size: 14px;
-font-weight: 500;
-color: rgba(0,0,0,0.5);       /* 50% black */
-transition: color 200ms ease;
+font-size: 14px;              /* text-sm */
+font-weight: 500;              /* font-medium */
+color: rgba(0,0,0,0.5);       /* text-foreground/50 */
+transition: all 200ms ease;
 
 /* Active/Hover state */
-color: black;
+color: black;                  /* text-foreground */
+
+/* External links */
+display: flex;
+align-items: center;
+gap: 4px;                     /* gap-1 */
+/* Include small external link icon */
 ```
 
 ### Cards & Containers
@@ -273,9 +285,10 @@ outline: none;
 ### Hover States
 
 1. **Links**: Opacity change or underline appearance
-2. **Buttons**: Background/color inversion
+2. **Buttons**: Background/color inversion + scale(1.05) transform
 3. **Cards**: Subtle border darkening
 4. **Navigation**: Opacity 50% → 100%
+5. **Interactive Elements**: Subtle scale transforms for enhanced feedback
 
 ### Focus States
 
@@ -302,6 +315,14 @@ box-shadow: 0 0 0 2px white, 0 0 0 4px black;
 2. **Concise Copy**: Every word earns its place
 3. **Active Voice**: "We build" not "Tools are built by us"
 4. **Human Scale**: Relatable without being casual
+
+### Tagline Philosophy
+
+**Current**: "Software to augment your mind"
+- Focuses on enhancement, not replacement
+- "Augment" suggests partnership between human and technology
+- Clear value proposition without technical jargon
+- Avoids overused terms while remaining accessible
 
 ---
 
@@ -387,7 +408,13 @@ box-shadow: 0 0 0 2px white, 0 0 0 4px black;
 
 ## Version History
 
-- **v2.0** (Current) - Clarity Through Simplicity redesign
+- **v2.1** (Current) - Enhanced interactions and refined messaging
+  - Updated button hover states with scale transforms
+  - Revised primary button to invert on hover
+  - New tagline: "Software to augment your mind"
+  - Added external link indicators to navigation
+  - Reduced button padding for more compact appearance
+- **v2.0** - Clarity Through Simplicity redesign
 - **v1.0** - Initial design with blue accents and custom fonts
 
 ---
