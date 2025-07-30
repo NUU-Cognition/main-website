@@ -6,7 +6,7 @@ export default function Home() {
                     NUU Cognition
                 </h1>
                 <p className="text-lg md:text-xl text-foreground/60 mb-12 leading-relaxed max-w-xl mx-auto">
-                    Thinking tools for everyone.
+                    Software to augment your mind.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
@@ -18,9 +18,9 @@ export default function Home() {
                     </a>
                     <a 
                         href="/tools" 
-                        className="px-6 py-2.5 bg-black text-white font-medium text-sm hover:bg-black/85 hover:scale-105 transition-all duration-200 rounded-full inline-block shadow-sm hover:shadow-md"
+                        className="px-6 py-2.5 border bg-black text-white font-medium text-sm hover:bg-black/0 hover:scale-105 hover:text-black hover:border-black/70 transition-all duration-200 rounded-full inline-block shadow-sm hover:shadow-md"
                     >
-                        Explore our thinking tools
+                        Explore our products
                     </a>
                 </div>
             </div>
