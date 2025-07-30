@@ -1,11 +1,12 @@
 export default function Learn() {
     return (
-        <div className="max-w-3xl mx-auto px-4 py-16">
-            <h1 className="font-mono text-4xl mb-8">learn</h1>
-            <div className="prose lg:prose-xl">
-                <div className="text-sm text-gray-500 mt-8">
-                    Coming soon.
-                </div>
+        <div className="min-h-screen pt-24 pb-20 px-6">
+            <div className="max-w-2xl mx-auto">
+                <h1 className="text-3xl font-medium mb-12">Learn</h1>
+                
+                <p className="text-foreground/50">
+                    Coming soon
+                </p>
             </div>
         </div>
     );

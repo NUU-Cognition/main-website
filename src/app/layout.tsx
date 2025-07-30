@@ -1,22 +1,7 @@
 // src/app/layout.tsx
 import './globals.css'
-import {Navigation} from '@/components/Navigation'
-import {Work_Sans} from 'next/font/google'
-import {Footer} from '@/components/Footer'
-import {Inter} from 'next/font/google'
-import localFont from 'next/font/local'
-
-const inter = Inter({subsets: ['latin'], variable: '--font-inter'})
-
-const workSans = Work_Sans({
-    variable: '--font-work-sans',
-    subsets: ['latin'],
-})
-
-const sono = localFont({
-    src: '../fonts/Sono-Regular.ttf',
-    variable: '--font-sono'
-})
+import {NavigationMinimal} from '@/components/NavigationMinimal'
+import {FooterMinimal} from '@/components/FooterMinimal'
 
 export const metadata = {
     title: 'nuu cognition',
@@ -34,13 +19,13 @@ interface RootLayoutProps {
 
 export default function RootLayout({children}: RootLayoutProps) {
     return (
-        <html lang="en" className={`${inter.variable} ${sono.variable} ${workSans.variable}`}>
-        <body suppressHydrationWarning className="min-h-screen flex flex-col">
-        <Navigation/>
+        <html lang="en">
+        <body suppressHydrationWarning className="min-h-screen flex flex-col font-sans antialiased">
+        <NavigationMinimal/>
         <main className="flex-grow">
             {children}
         </main>
-        <Footer/>
+        <FooterMinimal/>
         </body>
         </html>
     )
