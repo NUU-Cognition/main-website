@@ -5,15 +5,11 @@ export default function Tools() {
     return (
         <div className="min-h-screen bg-background">
             <div className="max-w-6xl mx-auto px-6 pt-24 pb-20">
-                {/* <div className="mb-16">
-                    <h1 className="text-4xl font-semibold text-foreground mb-4">Tools</h1>
-                    <p className="text-lg text-foreground/70 max-w-3xl">
-                        Software designed to augment your cognitive capabilities, not replace them.
-                    </p>
-                </div> */}
-                
-                <section className="mb-20">
-                    <h2 className="text-2xl text-foreground mb-8">Featured</h2>
+                {/* Featured Product */}
+                <section className="mb-24">
+                    <div className="mb-6">
+                        <p className="text-sm font-medium text-foreground/40 uppercase tracking-wider">Featured</p>
+                    </div>
                     
                     <ProductShowcase
                         title="NUU Surf"
@@ -30,8 +26,25 @@ export default function Tools() {
                     />
                 </section>
                 
-                <section>
-                    <h2 className="text-2xl text-foreground mb-8">Coming Soon</h2>
+                {/* Available Tools */}
+                <section className="mb-24">
+                    <div className="mb-6">
+                        <p className="text-sm font-medium text-foreground/40 uppercase tracking-wider">The NUU Suite</p>
+                    </div>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {/* Add non-featured existing tools here when available */}
+                        <div className="col-span-full text-center py-12 bg-soft-gray rounded-[4px]">
+                            <p className="text-foreground/50">More tools coming soon</p>
+                        </div>
+                    </div>
+                </section>
+                
+                {/* Future Tools */}
+                <section className="mb-24">
+                    <div className="mb-6">
+                        <p className="text-sm font-medium text-foreground/40 uppercase tracking-wider">Future Tools</p>
+                    </div>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
@@ -51,14 +64,14 @@ export default function Tools() {
                     </div>
                 </section>
                 
-                <div className="mt-20 pt-12 border-t border-border/50">
+                {/* <div className="mt-20 pt-12 border-t border-border/50">
                     <a 
                         href="/about" 
                         className="inline-flex items-center text-sm font-medium text-foreground/50 hover:text-foreground transition-colors duration-200"
                     >
                         ← Learn more about our philosophy
                     </a>
-                </div>
+                </div> */}
             </div>
         </div>
     );
