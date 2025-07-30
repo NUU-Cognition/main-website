@@ -8,6 +8,7 @@ interface ProductShowcaseProps {
   description: string
   features?: string[]
   link?: string
+  buttonText?: string
   className?: string
 }
 
@@ -17,6 +18,7 @@ export function ProductShowcase({
   description,
   features = [],
   link,
+  buttonText,
   className
 }: ProductShowcaseProps) {
   return (
@@ -43,7 +45,7 @@ export function ProductShowcase({
               href={link}
               className="inline-flex items-center gap-3 px-8 py-3 bg-foreground text-background rounded-full text-sm font-medium hover:bg-foreground/90 transition"
             >
-              Try&nbsp;{title}&nbsp;Now
+              {buttonText || `Try ${title} Now`}
               <ArrowRight className="w-4 h-4" />
             </a>
           )}

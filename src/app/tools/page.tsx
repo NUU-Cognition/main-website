@@ -13,7 +13,7 @@ export default function Tools() {
                 </div> */}
                 
                 <section className="mb-20">
-                    <h2 className="text-2xl font-semibold text-foreground mb-8">Featured</h2>
+                    <h2 className="text-2xl text-foreground mb-8">Featured</h2>
                     
                     <ProductShowcase
                         title="NUU Surf"
@@ -26,11 +26,12 @@ export default function Tools() {
                             "Built for deep understanding, not just skimming"
                         ]}
                         link="https://library.nuucognition.com"
+                        buttonText="Join Waitlist"
                     />
                 </section>
                 
                 <section>
-                    <h2 className="text-2xl font-semibold text-foreground mb-8">Coming Soon</h2>
+                    <h2 className="text-2xl text-foreground mb-8">Coming Soon</h2>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
@@ -45,27 +46,6 @@ export default function Tools() {
                             title="NUU Echo"
                             subtitle="Audio Intelligence"
                             description="Transform how you consume and process audio content. Echo brings clarity to podcasts, lectures, and conversations through intelligent processing."
-                            status="coming-soon"
-                        />
-                        
-                        <FutureProductCard
-                            title="NUU Remember"
-                            subtitle="Memory Enhancement"
-                            description="Advanced memory augmentation that helps you retain and recall information when you need it most."
-                            status="coming-soon"
-                        />
-                        
-                        <FutureProductCard
-                            title="NUU Focus"
-                            subtitle="Attention Management"
-                            description="Intelligent workspace that adapts to your cognitive state, creating the optimal environment for deep work."
-                            status="coming-soon"
-                        />
-                        
-                        <FutureProductCard
-                            title="NUU Connect"
-                            subtitle="Knowledge Synthesis"
-                            description="Build connections between disparate pieces of information to generate new insights and understanding."
                             status="coming-soon"
                         />
                     </div>
