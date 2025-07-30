@@ -154,7 +154,7 @@ export default function Ecosystem() {
                             <p className="text-sm text-foreground/60 leading-relaxed">
                                 Run everything on your machine for complete privacy and control, or leverage 
                                 cloud infrastructure for powerful compute and accessibility. Mix both approaches 
-                                based on each project's requirements.
+                                based on each project&apos;s requirements.
                             </p>
                         </div>
                         
@@ -268,7 +268,7 @@ export default function Ecosystem() {
                         <div className="flex gap-4 justify-center">
                             <a 
                                 href="https://forms.gle/your-waitlist-form"
-                                className="inline-flex items-center gap-2 px-6 py-2.5 bg-foreground text-background rounded-full text-sm font-medium hover:bg-foreground/90 transition"
+                                className="inline-flex border items-center gap-2 px-6 py-2.5 bg-foreground text-background rounded-full text-sm font-medium hover:bg-foreground/0 hover:text-black hover:border-foreground/20 hover:transition"
                             >
                                 Join Waitlist
                                 <ArrowRight className="w-4 h-4" />
@@ -277,12 +277,9 @@ export default function Ecosystem() {
                                 href="/tools"
                                 className="inline-flex items-center gap-2 px-6 py-2.5 border border-foreground/20 rounded-full text-sm font-medium hover:border-foreground/40 transition"
                             >
-                                Try NUU Surf Now
+                                Explore Tools
                             </a>
                         </div>
-                        <p className="text-xs text-foreground/40 mt-6">
-                            While you wait, explore NUU Surf — our first tool that's available today.
-                        </p>
                     </div>
                 </section>
             </div>

@@ -1,0 +1,10 @@
+.git
+.next
+node_modules
+.env*.local
+README.md
+.vscode
+.idea
+*.log
+.DS_Store
+architecture/
