@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import { cn } from "@/lib/utils"
 import { ArrowRight } from "lucide-react"
 
@@ -66,11 +67,14 @@ export function ProductShowcase({
         
         <div className="relative bg-soft-gray flex items-center justify-center p-8 md:p-12 lg:p-16">
           {image ? (
-            <img 
-              src={image} 
-              alt={title}
-              className="max-w-full h-auto object-contain"
-            />
+            <div className="relative w-full h-full min-h-[300px]">
+              <Image 
+                src={image} 
+                alt={title}
+                fill
+                className="object-contain"
+              />
+            </div>
           ) : (
             <div className="w-full h-full min-h-[300px] bg-white/50 rounded-[4px] border border-black/5" />
           )}
