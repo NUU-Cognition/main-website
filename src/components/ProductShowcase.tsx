@@ -32,7 +32,7 @@ export function ProductShowcase({
         <div className="flex-1 p-12 lg:p-16">
           <p className="text-sm font-medium text-foreground/50 mb-3">{subtitle}</p>
           
-          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6">
+          <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
             {title}
           </h2>
           
