@@ -19,19 +19,13 @@ export function SystemCard({
   link,
   className
 }: SystemCardProps) {
-  return (
-    <div className={cn(
-      "relative bg-white border border-black/10 rounded-[4px] p-8 md:p-10",
-      "transition-all duration-200 ease-out",
-      "hover:border-black/20",
-      "flex flex-col h-full",
-      className
-    )}>
+  const content = (
+    <>
       <div className="flex-1">
         <p className="text-xs font-medium text-foreground/40 uppercase tracking-wider mb-3">
           {subtitle}
         </p>
-        <h3 className="text-2xl md:text-3xl font-semibold text-foreground mb-4">
+        <h3 className="text-2xl md:text-3xl font-medium text-foreground mb-4">
           {title}
         </h3>
         <p className="text-base text-foreground/70 mb-6 leading-relaxed">
@@ -54,15 +48,42 @@ export function SystemCard({
       
       {link && (
         <div className="mt-auto">
-          <a 
-            href={link}
-            className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:gap-3 transition-all duration-200"
-          >
+          <span className="inline-flex items-center gap-2 text-sm font-medium text-foreground group-hover:gap-3 transition-all duration-200">
             Learn more
             <ArrowRight className="w-4 h-4" />
-          </a>
+          </span>
         </div>
       )}
+    </>
+  )
+
+  if (link) {
+    return (
+      <a
+        href={link}
+        className={cn(
+          "relative bg-white border border-black/10 rounded-[4px] p-8 md:p-10",
+          "transition-all duration-200 ease-out",
+          "hover:border-black/20 hover:shadow-lg",
+          "flex flex-col h-full",
+          "group cursor-pointer",
+          className
+        )}
+      >
+        {content}
+      </a>
+    )
+  }
+
+  return (
+    <div className={cn(
+      "relative bg-white border border-black/10 rounded-[4px] p-8 md:p-10",
+      "transition-all duration-200 ease-out",
+      "hover:border-black/20",
+      "flex flex-col h-full",
+      className
+    )}>
+      {content}
     </div>
   )
 }
