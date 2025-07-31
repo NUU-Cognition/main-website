@@ -43,7 +43,7 @@ export function ProductShowcase({
           {link && (
             <a 
               href={link}
-              className="inline-flex items-center gap-3 px-8 py-3 bg-foreground text-background rounded-full text-sm font-medium hover:bg-foreground/90 transition"
+              className="inline-flex items-center gap-3 px-6 py-2.5 border bg-black text-white font-medium text-sm hover:bg-black/0 hover:scale-105 hover:text-black hover:border-black/70 transition-all duration-200 rounded-full shadow-sm hover:shadow-md"
             >
               {buttonText || `Try ${title} Now`}
               <ArrowRight className="w-4 h-4" />
