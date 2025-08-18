@@ -28,7 +28,7 @@ export default function About() {
         </section>
 
         {/* Subtle divider */}
-        <div className="h-px bg-gradient-to-r from-transparent via-foreground/10 to-transparent my-12" />
+        <div className="h-px bg-border/60 my-12" />
 
         {/* Two-column details */}
         <section className="grid md:grid-cols-2 gap-10">
