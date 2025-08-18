@@ -3,6 +3,7 @@ import { PrincipleCard } from '@/components/PrincipleCard'
 import { BenefitRow } from '@/components/BenefitRow'
 import { Button } from '@/components/ui/button'
 import { ArrowRight, FileText, Shield, GitBranch, Globe, Cloud, Users, HardDrive, User, Layers, Zap, Sparkles } from "lucide-react"
+import { FocusHalo } from '@/components/effects/FocusHalo'
 
 export default function Ecosystem() {
     return (
@@ -148,7 +149,7 @@ export default function Ecosystem() {
                                     <HardDrive className="w-5 h-5 text-foreground/50" />
                                     <span className="text-sm font-medium text-foreground">Local</span>
                                 </div>
-                                <div className="flex-1 h-[1px] bg-gradient-to-r from-foreground/20 via-foreground/10 to-foreground/20" />
+                                <div className="flex-1 h-[1px] bg-border/40" />
                                 <div className="flex items-center gap-3">
                                     <span className="text-sm font-medium text-foreground">Cloud</span>
                                     <Cloud className="w-5 h-5 text-foreground/50" />
@@ -167,7 +168,7 @@ export default function Ecosystem() {
                                     <User className="w-5 h-5 text-foreground/50" />
                                     <span className="text-sm font-medium text-foreground">Individual</span>
                                 </div>
-                                <div className="flex-1 h-[1px] bg-gradient-to-r from-foreground/20 via-foreground/10 to-foreground/20" />
+                                <div className="flex-1 h-[1px] bg-border/40" />
                                 <div className="flex items-center gap-3">
                                     <span className="text-sm font-medium text-foreground">Collaborative</span>
                                     <Users className="w-5 h-5 text-foreground/50" />

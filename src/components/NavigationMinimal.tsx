@@ -52,7 +52,7 @@ export function NavigationMinimal() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <Image
-              src="/logo.svg"
+              src="/nuu.png"
               alt="NUU"
               width={28}
               height={28}

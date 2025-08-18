@@ -5,10 +5,10 @@ import { FooterMinimal } from "@/components/FooterMinimal"
 import { Geist, Geist_Mono } from "next/font/google"
 
 export const metadata = {
-  title: "nuu cognition",
-  description: "An independent practice exploring software, cognition, and human development.",
+  title: "NUU Cognition",
+  description: "Software to augment your mind.",
   icons: {
-    icon: [{ url: "/favicon.ico", sizes: "any" }],
+    icon: [{ url: "/nuu.png?v=2", sizes: "any" }],
   },
 }
 

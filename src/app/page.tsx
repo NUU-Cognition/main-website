@@ -1,10 +1,14 @@
 import { Button } from "@/components/ui/button"
 import { FocusHalo } from "@/components/effects/FocusHalo"
+import { StackedLayers } from "@/components/effects/StackedLayers"
+import { IceAurora } from "@/components/effects/IceAurora"
 
 export default function Home() {
   return (
     <div className="relative h-screen flex items-center justify-center px-6">
-      <FocusHalo />
+      {/* <FocusHalo /> */}
+      {/* <StackedLayers /> */}
+      {/* <IceAurora /> */}
 
       {/* Hero */}
       <div className="max-w-3xl mx-auto text-center">
