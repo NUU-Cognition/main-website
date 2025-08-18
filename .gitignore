@@ -43,7 +43,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Contextr directory
-.contextr/
-
 .vercel

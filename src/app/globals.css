@@ -3,141 +3,159 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ---- Base tokens (HSL) ---- */
 @layer base {
-    :root {
-        /* Clean Design System */
-        --background: 0 0% 100%; /* pure white */
-        --foreground: 0 0% 5%; /* almost black */
-        
-        --card: 0 0% 100%;
-        --card-foreground: 0 0% 5%;
-        
-        --popover: 0 0% 100%;
-        --popover-foreground: 0 0% 5%;
-        
-        --primary: 0 0% 5%; /* almost black */
-        --primary-foreground: 0 0% 100%;
-        
-        --secondary: 0 0% 97%; /* light gray */
-        --secondary-foreground: 0 0% 5%;
-        
-        --muted: 0 0% 97%;
-        --muted-foreground: 0 0% 30%; /* readable gray */
-        
-        --accent: 0 0% 95%; /* subtle gray */
-        --accent-foreground: 0 0% 5%;
-        
-        --destructive: 0 0% 5%;
-        --destructive-foreground: 0 0% 100%;
-        
-        --border: 0 0% 80%; /* soft border */
-        --input: 0 0% 80%;
-        --ring: 0 0% 20%;
-        
-        --radius: 0.25rem; /* subtle radius */
-    }
-    
-    .dark {
-        --background: 0 0% 0%;
-        --foreground: 0 0% 100%;
-        
-        --card: 0 0% 0%;
-        --card-foreground: 0 0% 100%;
-        
-        --popover: 0 0% 0%;
-        --popover-foreground: 0 0% 100%;
-        
-        --primary: 216 100% 50%;
-        --primary-foreground: 0 0% 0%;
-        
-        --secondary: 0 0% 10%;
-        --secondary-foreground: 0 0% 100%;
-        
-        --muted: 0 0% 10%;
-        --muted-foreground: 0 0% 60%;
-        
-        --accent: 261 53% 51%;
-        --accent-foreground: 0 0% 100%;
-        
-        --destructive: 0 62% 30%;
-        --destructive-foreground: 0 0% 100%;
-        
-        --border: 0 0% 15%;
-        --input: 0 0% 15%;
-        --ring: 216 100% 50%;
-    }
+  :root {
+    /* Light Theme — per style guide */
+    --background: 0 0% 100%;           /* Pure white */
+    --foreground: 222.2 84% 4.9%;      /* Dark navy */
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;      /* Navy blue */
+    --primary-foreground: 210 40% 98%; /* Off-white */
+
+    --secondary: 210 40% 96.1%;        /* Light gray */
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    /* Border radius scale */
+    --radius: 0.5rem;
+
+    /* Ice palette (for effects) */
+    --ice-50: #f8fafc;
+    --ice-100: #f1f5f9;
+    --ice-200: #e2e8f0;
+    --ice-300: #cbd5e1;
+    --ice-400: #94a3b8;
+    --ice-500: #334155;
+    /* RGB helpers */
+    --ice-100-rgb: 241 245 249;
+    --ice-200-rgb: 226 232 240;
+    --ice-300-rgb: 203 213 225;
+    --ice-400-rgb: 148 163 184;
+    --ice-500-rgb: 51 65 85;
+  }
+
+  .dark {
+    /* Dark Theme — per style guide */
+    --background: 222.2 84% 4.9%;      /* Dark navy */
+    --foreground: 210 40% 98%;         /* Off-white */
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 210 40% 98%;
+  }
 }
 
+/* ---- Base element styling ---- */
 @layer base {
-    * {
-        @apply border-border;
-    }
-    
-    body {
-        @apply bg-background text-foreground;
-        font-feature-settings: "kern" 1;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-        @apply font-sans tracking-tight;
-    }
-    
-    /* Minimal focus styles */
-    *:focus {
-        outline: none;
-    }
-    
-    *:focus-visible {
-        @apply ring-1 ring-offset-2 ring-offset-background;
-    }
-}
+  * {
+    @apply border-border;
+  }
 
-/* Add to globals.css */
-.font-mono {
+  body {
+    @apply bg-background text-foreground antialiased;
     font-feature-settings: "kern" 1;
-    font-kerning: normal;
-    letter-spacing: -0.00em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans tracking-tight;
+  }
+
+  /* Focus styles per style guide */
+  *:focus { outline: none; }
+  *:focus-visible { @apply ring-1 ring-ring ring-offset-2 ring-offset-background; }
 }
 
-h1.font-mono {
-    margin-left: -0.08em;
+/* Mono fine-tuning */
+.font-mono {
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  letter-spacing: 0;
 }
+h1.font-mono { margin-left: -0.08em; }
 
-/*!* Optional: Add a specific class for the logo *!*/
-/*.nuu-logo {*/
-/*    font-feature-settings: "kern" 1;*/
-/*    font-kerning: normal;*/
-/*    letter-spacing: -0.01em;*/
-/*}*/
-
-html {
-    scrollbar-gutter: stable;
-}
+html { scrollbar-gutter: stable; }
 
 @media (prefers-reduced-motion: no-preference) {
-    .hover\:pause:hover {
-        animation-play-state: paused;
-    }
+  .hover\:pause:hover { animation-play-state: paused; }
 }
 
-/* Hide or style scrollbar */
-.hide-scrollbar::-webkit-scrollbar {
-    height: 8px; /* or display: none; */
-}
-
-.hide-scrollbar::-webkit-scrollbar-track {
-    background: transparent;
-}
-
+/* Scrollbar styling */
+.hide-scrollbar::-webkit-scrollbar { height: 8px; }
+.hide-scrollbar::-webkit-scrollbar-track { background: transparent; }
 .hide-scrollbar::-webkit-scrollbar-thumb {
-    background-color: rgba(107, 114, 128, 0.4); /* Tailwind gray-500 with ~40% opacity */
-    border-radius: 4px;
+  background-color: rgba(107,114,128,0.4);
+  border-radius: 4px;
+}
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ---- Special Effects per guide ---- */
+.glass-frosted {
+  /* translucent, theme-aware glass card */
+  background: rgba(var(--ice-400-rgb), 0.08);
+  backdrop-filter: blur(8px) saturate(140%);
+  -webkit-backdrop-filter: blur(8px) saturate(140%);
+  padding: 10px;
+  margin: 10px;
+  border-radius: var(--radius);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+  transform: translateY(0);
+  border: 1px solid hsl(var(--border) / 0.6);
+  box-shadow:
+    0 20px 80px -20px rgba(15,23,42,0.20),
+    0 0 1px rgba(15,23,42,0.08);
+  cursor: default;
+}
+.glass-frosted:hover {
+  transform: translateY(-2px);
+  border-color: hsl(var(--border) / 0.8);
 }
 
-.hide-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+/* Optional aurora mask helper */
+.aurora-mask {
+  /* softly fades edges of large gradients */
+  -webkit-mask-image: radial-gradient(60% 50% at 50% 40%, black 40%, transparent 100%);
+  mask-image: radial-gradient(60% 50% at 50% 40%, black 40%, transparent 100%);
 }

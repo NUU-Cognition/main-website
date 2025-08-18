@@ -3,11 +3,11 @@ import { FutureProductCard } from '@/components/FutureProductCard'
 
 export default function Tools() {
     return (
-        <div className="min-h-screen bg-background">
-            <div className="max-w-6xl mx-auto px-6 pt-24 pb-20">
-                {/* Featured Product */}
-                <section className="mb-24">
-                    <div className="mb-6">
+        <div className="bg-background">
+            {/* Featured Product Section - Full Screen */}
+            <section className="min-h-screen flex items-center px-6 pt-14">
+                <div className="max-w-6xl mx-auto w-full">
+                    <div className="mb-8">
                         <p className="text-sm font-medium text-foreground/40 uppercase tracking-wider">Featured</p>
                     </div>
                     
@@ -24,30 +24,33 @@ export default function Tools() {
                         link="https://library.nuucognition.com"
                         buttonText="Join Waitlist"
                     />
-                </section>
-                
-                {/* Available Tools */}
-                <section className="mb-24">
-                    <div className="mb-6">
+                </div>
+            </section>
+            
+            {/* Available Tools Section - Full Screen */}
+            <section className="min-h-screen flex items-center px-6">
+                <div className="max-w-6xl mx-auto w-full">
+                    <div className="mb-8">
                         <p className="text-sm font-medium text-foreground/40 uppercase tracking-wider">The NUU Suite</p>
                     </div>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {/* Add non-featured existing tools here when available */}
-                        <div className="col-span-full text-center py-12 bg-soft-gray rounded-[4px]">
-                            <p className="text-foreground/50">More tools coming soon</p>
+                        <div className="col-span-full text-center py-24 bg-soft-gray rounded-lg">
+                            <p className="text-foreground/50 text-lg">More tools coming soon</p>
                         </div>
                     </div>
-                </section>
-                
-                {/* Future Tools */}
-                <section className="mb-24">
-                    <div className="mb-6">
+                </div>
+            </section>
+            
+            {/* Future Tools Section - Full Screen */}
+            <section className="min-h-screen flex items-center px-6 pb-20">
+                <div className="max-w-6xl mx-auto w-full">
+                    <div className="mb-8">
                         <p className="text-sm font-medium text-foreground/40 uppercase tracking-wider">Future Tools</p>
                     </div>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <FutureProductCard
                             title="NUU Transform"
                             subtitle="Media Conversion"
@@ -62,17 +65,8 @@ export default function Tools() {
                             status="coming-soon"
                         />
                     </div>
-                </section>
-                
-                {/* <div className="mt-20 pt-12 border-t border-border/50">
-                    <a 
-                        href="/about" 
-                        className="inline-flex items-center text-sm font-medium text-foreground/50 hover:text-foreground transition-colors duration-200"
-                    >
-                        ← Learn more about our philosophy
-                    </a>
-                </div> */}
-            </div>
+                </div>
+            </section>
         </div>
     );
 }

@@ -6,116 +6,145 @@ import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { Menu, X, ExternalLink } from 'lucide-react'
 import { cn } from "@/lib/utils"
+import { Button } from "@/components/ui/button"
 
 export function NavigationMinimal() {
-    const [isMenuOpen, setIsMenuOpen] = React.useState(false)
-    const pathname = usePathname()
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
+  const [scrolled, setScrolled] = React.useState(false)
+  const pathname = usePathname()
+  const isHome = pathname === "/"
 
-    React.useEffect(() => {
-        setIsMenuOpen(false)
-    }, [pathname])
+  React.useEffect(() => {
+    setIsMenuOpen(false)
+  }, [pathname])
 
-    const navItems = [
-        { href: '/', label: 'home' },
-        { href: '/about', label: 'about' },
-        { href: '/ecosystem', label: 'ecosystem' },
-        { href: '/tools', label: 'tools' },
-        { href: 'https://library.nuucognition.com', label: 'docs', external: true },
-    ]
+  React.useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10)
+    onScroll()
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
 
-    return (
-        <nav className="absolute top-0 left-0 right-0 z-50">
-            <div className="max-w-6xl mx-auto px-6">
-                <div className="flex justify-between items-center h-16">
-                    {/* Logo */}
-                    <Link href="/" className="flex items-center">
-                        <Image 
-                            src="/logo.svg" 
-                            alt="NUU Cognition Logo" 
-                            width={30} 
-                            height={30}
-                            className="h-6 w-6"
-                        />
-                    </Link>
+  const navItems = [
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { href: '/ecosystem', label: 'Ecosystem' },
+    { href: '/tools', label: 'Tools' },
+    { href: 'https://library.nuucognition.com', label: 'Docs', external: true },
+  ]
 
-                    {/* Desktop Navigation */}
-                    <div className="hidden md:flex items-center space-x-8">
-                        {navItems.map((item) => (
-                            item.external ? (
-                                <a
-                                    key={item.href}
-                                    href={item.href}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-sm font-medium text-foreground/50 hover:text-foreground transition-all duration-200 flex items-center gap-1"
-                                >
-                                    {item.label.charAt(0).toUpperCase() + item.label.slice(1)}
-                                    <ExternalLink size={12} />
-                                </a>
-                            ) : (
-                                <Link
-                                    key={item.href}
-                                    href={item.href}
-                                    className={cn(
-                                        "text-sm font-medium transition-all duration-200",
-                                        pathname === item.href 
-                                            ? "text-foreground" 
-                                            : "text-foreground/50 hover:text-foreground"
-                                    )}
-                                >
-                                    {item.label.charAt(0).toUpperCase() + item.label.slice(1)}
-                                </Link>
-                            )
-                        ))}
-                    </div>
+  return (
+    <nav
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all",
+        isHome && !scrolled
+          ? "bg-transparent border-transparent"
+          : "bg-background/80 border-b border-border/40 backdrop-blur-md supports-[backdrop-filter]:bg-background/60 shadow-[0_1px_0_rgba(0,0,0,0.06),0_8px_20px_-12px_rgba(15,23,42,0.18)]"
+      )}
+    >
+      {/* Soft legibility underlay only at top of the homepage */}
+      {isHome && !scrolled && (
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-20 -z-10 bg-gradient-to-b from-background/85 via-background/60 to-transparent" />
+      )}
 
-                    {/* Mobile Menu Button */}
-                    <button
-                        onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        className="md:hidden p-2 -mr-2 opacity-60 hover:opacity-100 transition-opacity"
-                        aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-                    >
-                        {isMenuOpen ? <X size={18} /> : <Menu size={18} />}
-                    </button>
-                </div>
-            </div>
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="flex justify-between items-center h-14">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-2 group">
+            <Image
+              src="/logo.svg"
+              alt="NUU"
+              width={28}
+              height={28}
+              priority
+              className="h-7 w-7 transition-transform group-hover:scale-110"
+            />
+            <span className="font-semibold text-sm hidden sm:inline-block">
+              NUU Cognition
+            </span>
+          </Link>
 
-            {/* Mobile Menu */}
-            {isMenuOpen && (
-                <div className="md:hidden border-t border-border/50 bg-background/95 backdrop-blur-sm">
-                    <div className="px-6 py-4 space-y-3">
-                        {navItems.map((item) => (
-                            item.external ? (
-                                <a
-                                    key={item.href}
-                                    href={item.href}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center gap-1 text-sm font-medium text-foreground/50 transition-all duration-200"
-                                    onClick={() => setIsMenuOpen(false)}
-                                >
-                                    {item.label.charAt(0).toUpperCase() + item.label.slice(1)}
-                                    <ExternalLink size={12} />
-                                </a>
-                            ) : (
-                                <Link
-                                    key={item.href}
-                                    href={item.href}
-                                    className={cn(
-                                        "block text-sm font-medium transition-all duration-200",
-                                        pathname === item.href 
-                                            ? "text-foreground" 
-                                            : "text-foreground/50"
-                                    )}
-                                    onClick={() => setIsMenuOpen(false)}
-                                >
-                                    {item.label.charAt(0).toUpperCase() + item.label.slice(1)}
-                                </Link>
-                            )
-                        ))}
-                    </div>
-                </div>
+          {/* Desktop Nav */}
+          <div className="hidden md:flex items-center gap-1">
+            {navItems.map((item) =>
+              item.external ? (
+                <Button
+                  key={item.href}
+                  variant="ghost"
+                  size="sm"
+                  asChild
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  <a href={item.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
+                    {item.label}
+                    <ExternalLink className="h-3 w-3" />
+                  </a>
+                </Button>
+              ) : (
+                <Button
+                  key={item.href}
+                  variant="ghost"
+                  size="sm"
+                  asChild
+                  className={cn(
+                    pathname === item.href
+                      ? "text-foreground bg-accent"
+                      : "text-muted-foreground hover:text-foreground"
+                  )}
+                >
+                  <Link href={item.href}>{item.label}</Link>
+                </Button>
+              )
             )}
-        </nav>
-    )
+          </div>
+
+          {/* Mobile menu button */}
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden h-9 w-9"
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+          >
+            {isMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+          </Button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden border-t border-border/40 bg-background/95 backdrop-blur-md">
+          <div className="px-6 py-4 space-y-1">
+            {navItems.map((item) =>
+              item.external ? (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+              ) : (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={cn(
+                    "block py-2 text-sm font-medium transition-colors",
+                    pathname === item.href ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+                  )}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              )
+            )}
+          </div>
+        </div>
+      )}
+    </nav>
+  )
 }

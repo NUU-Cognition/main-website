@@ -1,5 +1,6 @@
 import React from 'react'
 import { cn } from "@/lib/utils"
+import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 
 interface FutureProductCardProps {
@@ -27,7 +28,7 @@ export function FutureProductCard({
 
   return (
     <div className={cn(
-      "relative bg-white border border-black/10 rounded-[4px] p-6 md:p-8",
+      "relative bg-white border border-black/10 rounded-lg p-8 md:p-10",
       "transition-all duration-200 ease-out",
       "hover:border-black/20",
       "group",
@@ -46,18 +47,17 @@ export function FutureProductCard({
           </p>
         </div>
         
-        <p className="text-sm text-foreground/70 mb-6 leading-relaxed flex-grow">
+        <p className="text-sm text-foreground/70 mb-8 leading-relaxed flex-grow">
           {description}
         </p>
         
         {link && (
-          <a 
-            href={link}
-            className="inline-flex items-center gap-2 text-sm font-medium text-foreground/50 hover:text-foreground group-hover:gap-3 transition-all duration-200"
-          >
-            Get notified
-            <ArrowRight className="w-3 h-3" />
-          </a>
+          <Button variant="link" asChild>
+            <a href={link}>
+              Get notified
+              <ArrowRight className="w-3 h-3 ml-1" />
+            </a>
+          </Button>
         )}
       </div>
     </div>

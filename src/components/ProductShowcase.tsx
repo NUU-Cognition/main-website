@@ -1,5 +1,6 @@
 import React from 'react'
 import { cn } from "@/lib/utils"
+import { Button } from "@/components/ui/button"
 import { ArrowRight, Zap, Layers, Brain, Sparkles } from "lucide-react"
 
 interface ProductShowcaseProps {
@@ -23,13 +24,13 @@ export function ProductShowcase({
 }: ProductShowcaseProps) {
   return (
     <div className={cn(
-      "relative bg-white border border-black/10 rounded-[4px] overflow-hidden",
+      "relative bg-white border border-black/10 rounded-lg overflow-hidden",
       "transition-all duration-200 hover:border-black/20",
       className
     )}>
       <div className="flex flex-col lg:flex-row">
         {/* Left side */}
-        <div className="flex-1 p-12 lg:p-16">
+        <div className="flex-1 p-16 lg:p-20">
           <p className="text-sm font-medium text-foreground/50 mb-3">{subtitle}</p>
           
           <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
@@ -41,18 +42,17 @@ export function ProductShowcase({
           </p>
           
           {link && (
-            <a 
-              href={link}
-              className="inline-flex items-center gap-3 px-6 py-2.5 border bg-black text-white font-medium text-sm hover:bg-black/0 hover:scale-105 hover:text-black hover:border-black/70 transition-all duration-200 rounded-full shadow-sm hover:shadow-md"
-            >
-              {buttonText || `Try ${title} Now`}
-              <ArrowRight className="w-4 h-4" />
-            </a>
+            <Button asChild>
+              <a href={link}>
+                {buttonText || `Try ${title} Now`}
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </a>
+            </Button>
           )}
         </div>
         
         {/* Right side */}
-        <div className="lg:w-[40%] bg-soft-gray p-12 lg:p-16">
+        <div className="lg:w-[40%] bg-soft-gray p-16 lg:p-20">
           <h3 className="text-sm font-medium text-foreground/40 uppercase tracking-wider">
             Key&nbsp;Features
           </h3>

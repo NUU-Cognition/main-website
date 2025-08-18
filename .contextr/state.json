@@ -1,0 +1,30 @@
+{
+    "current_profile": null,
+    "files": [
+        "src\\app\\about\\page.tsx",
+        "src\\app\\ecosystem\\page.tsx",
+        "src\\app\\favicon.ico",
+        "src\\app\\globals.css",
+        "src\\app\\layout.tsx",
+        "src\\app\\page.tsx",
+        "src\\app\\tools\\page.tsx",
+        "src\\components\\BenefitRow.tsx",
+        "src\\components\\FooterMinimal.tsx",
+        "src\\components\\FutureProductCard.tsx",
+        "src\\components\\NavigationMinimal.tsx",
+        "src\\components\\PrincipleCard.tsx",
+        "src\\components\\ProductShowcase.tsx",
+        "src\\components\\SurfVisualPattern.tsx",
+        "src\\components\\SystemCard.tsx",
+        "src\\components\\effects\\FocusHalo.tsx",
+        "src\\components\\effects\\IceAurora.tsx",
+        "src\\components\\effects\\StackedLayers.tsx",
+        "src\\components\\ui\\button.tsx",
+        "src\\components\\ui\\card.tsx",
+        "src\\components\\ui\\separator.tsx",
+        "src\\lib\\utils.ts"
+    ],
+    "watched_patterns": [
+        "src"
+    ]
+}
