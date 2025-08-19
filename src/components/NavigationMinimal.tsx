@@ -41,10 +41,6 @@ export function NavigationMinimal() {
           : "bg-background/80 border-b border-border/40 backdrop-blur-md supports-[backdrop-filter]:bg-background/60 shadow-[0_1px_0_rgba(0,0,0,0.06),0_8px_20px_-12px_rgba(15,23,42,0.18)]"
       )}
     >
-      {/* Soft legibility underlay at top of all pages */}
-      {!scrolled && (
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-20 -z-10 bg-gradient-to-b from-background/85 via-background/60 to-transparent" />
-      )}
 
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex justify-between items-center h-14">
