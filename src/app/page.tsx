@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <div className="relative h-screen flex items-center justify-center px-6">
       {/* Grid effect that follows mouse */}
-      <GridGlow />
-      
+      {/* <GridGlow /> */}
+
       {/* Background Effects */}
       {/* <div className="absolute inset-0 overflow-hidden">
         <MeshGradient
@@ -32,16 +32,16 @@ export default function Home() {
       {/* Hero */}
       <div className="relative z-10 max-w-3xl mx-auto text-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight">
-          Augment your thinking.
+          Augment your mind.
         </h1>
 
         <p className="mt-4 text-lg md:text-xl text-foreground/60 leading-relaxed max-w-xl mx-auto">
-          Tools for deep understanding and flow — markdown‑first, local‑first, AI‑ready.
+          We're building the next generation of thinking tools.
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center items-center">
           <Button asChild>
-            <a href="/tools">Explore tools</a>
+            <a href="/tools">Join our alpha program -></a>
           </Button>
           <Button variant="outline" asChild>
             <a href="/about">Learn more</a>
