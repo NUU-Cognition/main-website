@@ -3,8 +3,8 @@
     "files": [
         "src\\app\\about\\page.tsx",
         "src\\app\\ecosystem\\page.tsx",
-        "src\\app\\favicon.ico",
         "src\\app\\globals.css",
+        "src\\app\\icon.png",
         "src\\app\\layout.tsx",
         "src\\app\\page.tsx",
         "src\\app\\tools\\page.tsx",
@@ -17,6 +17,7 @@
         "src\\components\\SurfVisualPattern.tsx",
         "src\\components\\SystemCard.tsx",
         "src\\components\\effects\\FocusHalo.tsx",
+        "src\\components\\effects\\GridGlow.tsx",
         "src\\components\\effects\\IceAurora.tsx",
         "src\\components\\effects\\StackedLayers.tsx",
         "src\\components\\ui\\button.tsx",

@@ -17,8 +17,7 @@ export function StackedLayers() {
         <div className="nuu-layer layer-3" />
       </div>
 
-      {/* Subtle grid sheen for texture */}
-      <div className="nuu-grid" />
+      {/* Subtle grid sheen (disabled for now) */}
       <style jsx>{`
         .nuu-layers {
           position: absolute;
@@ -82,19 +81,6 @@ export function StackedLayers() {
         @media (prefers-reduced-motion: reduce) {
           .layer-1, .layer-2, .layer-3 { animation: none; }
         }
-
-        // /* Very faint grid for texture (theme-aware) */
-        // .nuu-grid {
-        //   position: absolute;
-        //   inset: 0;
-        //   background:
-        //     linear-gradient(to right, hsl(var(--foreground) / 0.04) 1px, transparent 1px),
-        //     linear-gradient(to bottom, hsl(var(--foreground) / 0.04) 1px, transparent 1px);
-        //   background-size: 36px 36px;
-        //   mask-image: radial-gradient(65% 55% at 50% 45%, black 35%, transparent 100%);
-        //   -webkit-mask-image: radial-gradient(65% 55% at 50% 45%, black 35%, transparent 100%);
-        //   pointer-events: none;
-        // }
       `}</style>
     </div>
   )

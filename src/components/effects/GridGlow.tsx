@@ -39,7 +39,7 @@ export function GridGlow() {
   return (
     <div ref={containerRef} aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
       {/* Base grid pattern */}
-      <svg className="absolute inset-0 h-full w-full">
+      {/* <svg className="absolute inset-0 h-full w-full">
         <defs>
           <pattern
             id="grid-base"
@@ -60,7 +60,7 @@ export function GridGlow() {
       </svg> */}
 
       {/* Enhanced grid under spotlight */}
-      <svg
+      {/* <svg
         className="absolute inset-0 h-full w-full"
         style={{
           mask: `radial-gradient(circle 350px at ${mousePos.x}px ${mousePos.y}px, 
@@ -92,10 +92,10 @@ export function GridGlow() {
           </pattern>
         </defs>
         <rect width="100%" height="100%" fill="url(#grid-highlight)" />
-      </svg>
+      </svg> */}
 
       {/* Multi-layer glow effect */}
-      {/* <div
+      <div
         className="absolute pointer-events-none mix-blend-screen"
         style={{
           left: mousePos.x - 400,
@@ -127,6 +127,7 @@ export function GridGlow() {
         }}
       />
 
+
       <div
         className="absolute pointer-events-none"
         style={{
@@ -140,7 +141,7 @@ export function GridGlow() {
             transparent 70%)`,
           filter: 'blur(1px)',
         }}
-      /> */}
+      />
     </div>
   )
 }
