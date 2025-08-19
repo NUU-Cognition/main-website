@@ -11,9 +11,9 @@ export function GridGlow() {
     const updateMousePosition = () => {
       if (containerRef.current) {
         const rect = containerRef.current.getBoundingClientRect()
-        setMousePos({ 
-          x: globalMousePos.x - rect.left, 
-          y: globalMousePos.y - rect.top 
+        setMousePos({
+          x: globalMousePos.x - rect.left,
+          y: globalMousePos.y - rect.top
         })
       }
     }
@@ -29,7 +29,7 @@ export function GridGlow() {
 
     window.addEventListener("mousemove", handleMouseMove)
     window.addEventListener("scroll", handleScroll, { passive: true })
-    
+
     return () => {
       window.removeEventListener("mousemove", handleMouseMove)
       window.removeEventListener("scroll", handleScroll)
@@ -38,11 +38,11 @@ export function GridGlow() {
 
   return (
     <div ref={containerRef} aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-      {/* Grid pattern */}
+      {/* Base grid pattern */}
       <svg className="absolute inset-0 h-full w-full">
         <defs>
           <pattern
-            id="grid"
+            id="grid-base"
             width="40"
             height="40"
             patternUnits="userSpaceOnUse"
@@ -55,33 +55,92 @@ export function GridGlow() {
               className="text-foreground/10"
             />
           </pattern>
-          <radialGradient id="glow">
-            <stop offset="0%" stopColor="rgb(253 224 71 / 0.5)" />
-            <stop offset="30%" stopColor="rgb(251 191 36 / 0.3)" />
-            <stop offset="60%" stopColor="rgb(251 191 36 / 0.1)" />
-            <stop offset="100%" stopColor="transparent" />
-          </radialGradient>
         </defs>
-        <rect width="100%" height="100%" fill="url(#grid)" />
+        <rect width="100%" height="100%" fill="url(#grid-base)" />
+      </svg> */}
+
+      {/* Enhanced grid under spotlight */}
+      <svg
+        className="absolute inset-0 h-full w-full"
+        style={{
+          mask: `radial-gradient(circle 350px at ${mousePos.x}px ${mousePos.y}px, 
+            rgba(255,255,255,1) 0%, 
+            rgba(255,255,255,0.8) 30%, 
+            rgba(255,255,255,0.3) 60%, 
+            transparent 100%)`,
+          WebkitMask: `radial-gradient(circle 350px at ${mousePos.x}px ${mousePos.y}px, 
+            rgba(255,255,255,1) 0%, 
+            rgba(255,255,255,0.8) 30%, 
+            rgba(255,255,255,0.3) 60%, 
+            transparent 100%)`
+        }}
+      >
+        <defs>
+          <pattern
+            id="grid-highlight"
+            width="40"
+            height="40"
+            patternUnits="userSpaceOnUse"
+          >
+            <path
+              d="M 40 0 L 0 0 0 40"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1"
+              className="text-foreground/30"
+            />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid-highlight)" />
       </svg>
-      
-      {/* Circular spotlight that follows mouse */}
+
+      {/* Multi-layer glow effect */}
+      {/* <div
+        className="absolute pointer-events-none mix-blend-screen"
+        style={{
+          left: mousePos.x - 400,
+          top: mousePos.y - 400,
+          width: 800,
+          height: 800,
+          background: `radial-gradient(circle at center, 
+            rgba(253,224,71,0.15) 0%, 
+            rgba(251,191,36,0.1) 15%, 
+            rgba(251,191,36,0.05) 30%, 
+            transparent 50%)`,
+          filter: 'blur(40px)',
+        }}
+      />
+
+      <div
+        className="absolute pointer-events-none mix-blend-screen"
+        style={{
+          left: mousePos.x - 200,
+          top: mousePos.y - 200,
+          width: 400,
+          height: 400,
+          background: `radial-gradient(circle at center, 
+            rgba(254,240,138,0.3) 0%, 
+            rgba(253,224,71,0.2) 20%, 
+            rgba(251,191,36,0.1) 40%, 
+            transparent 60%)`,
+          filter: 'blur(20px)',
+        }}
+      />
+
       <div
         className="absolute pointer-events-none"
         style={{
-          left: mousePos.x - 250,
-          top: mousePos.y - 250,
-          width: 500,
-          height: 500,
+          left: mousePos.x - 150,
+          top: mousePos.y - 150,
+          width: 300,
+          height: 300,
           background: `radial-gradient(circle at center, 
-            rgba(253,224,71,0.2) 0%, 
-            rgba(251,191,36,0.15) 20%, 
-            rgba(251,191,36,0.08) 40%, 
-            rgba(251,191,36,0.03) 60%,
+            rgba(254,249,195,0.08) 0%, 
+            rgba(254,240,138,0.06) 30%, 
             transparent 70%)`,
-          filter: 'blur(2px)',
+          filter: 'blur(1px)',
         }}
-      />
+      /> */}
     </div>
   )
 }
