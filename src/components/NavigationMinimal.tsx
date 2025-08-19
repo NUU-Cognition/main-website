@@ -12,7 +12,6 @@ export function NavigationMinimal() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   const [scrolled, setScrolled] = React.useState(false)
   const pathname = usePathname()
-  const isHome = pathname === "/"
 
   React.useEffect(() => {
     setIsMenuOpen(false)
@@ -37,13 +36,13 @@ export function NavigationMinimal() {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all",
-        isHome && !scrolled
+        !scrolled
           ? "bg-transparent border-transparent"
           : "bg-background/80 border-b border-border/40 backdrop-blur-md supports-[backdrop-filter]:bg-background/60 shadow-[0_1px_0_rgba(0,0,0,0.06),0_8px_20px_-12px_rgba(15,23,42,0.18)]"
       )}
     >
-      {/* Soft legibility underlay only at top of the homepage */}
-      {isHome && !scrolled && (
+      {/* Soft legibility underlay at top of all pages */}
+      {!scrolled && (
         <div className="pointer-events-none absolute inset-x-0 top-0 h-20 -z-10 bg-gradient-to-b from-background/85 via-background/60 to-transparent" />
       )}
 

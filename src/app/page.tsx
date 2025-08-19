@@ -29,9 +29,9 @@ export default function Home() {
           </Button>
         </div>
 
-        <p className="mt-6 text-xs text-foreground/50">
-          Cognition × Software • Plain files • No lock‑in
-        </p>
+        {/* <p className="mt-6 text-xs text-foreground/50">
+          Cognition × Software
+        </p> */}
       </div>
     </div>
   )
