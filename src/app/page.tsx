@@ -31,7 +31,7 @@ export default function Home() {
 
       {/* Hero */}
       <div className="relative z-10 max-w-3xl mx-auto text-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight">
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-light tracking-tight">
           Augment your mind.
         </h1>
 
