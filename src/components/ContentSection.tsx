@@ -13,7 +13,7 @@ export function ContentSection({
   wide = false
 }: ContentSectionProps) {
   return (
-    <section className={cn("py-20", className)}>
+    <section className={cn("py-32", className)}>
       <div className={cn(
         "mx-auto px-6",
         wide ? "max-w-7xl" : "max-w-6xl"

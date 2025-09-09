@@ -6,17 +6,17 @@ export function FooterMinimal() {
         <footer className="mt-auto border-t border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <div className="max-w-6xl mx-auto px-6 py-12">
                 {/* Main footer content */}
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-8">
                     {/* Brand column */}
-                    <div className="md:col-span-2">
+                    <div className="md:max-w-md">
                         <h3 className="font-semibold text-lg mb-2">NUU Cognition</h3>
-                        <p className="text-sm text-muted-foreground max-w-sm">
+                        <p className="text-sm text-muted-foreground">
                             We're building the next generation of thinking tools.
                         </p>
                     </div>
                     
                     {/* Quick links */}
-                    <div>
+                    {/* <div>
                         <h4 className="font-medium text-sm mb-3">Product</h4>
                         <ul className="space-y-2 text-sm">
                             <li>
@@ -35,15 +35,15 @@ export function FooterMinimal() {
                                 </Button>
                             </li>
                         </ul>
-                    </div>
+                    </div> */}
                     
                     {/* Connect */}
-                    <div>
+                    <div className="flex flex-col items-start md:items-end">
                         <h4 className="font-medium text-sm mb-3">Connect</h4>
                         <div className="flex gap-3">
                             <Button variant="ghost" size="icon" asChild className="h-9 w-9">
                                 <a 
-                                    href="mailto:hello@nuucognition.com" 
+                                    href="mailto:nuucognition@gmail.com" 
                                     aria-label="Email"
                                 >
                                     <Mail className="h-4 w-4" />
@@ -51,7 +51,7 @@ export function FooterMinimal() {
                             </Button>
                             <Button variant="ghost" size="icon" asChild className="h-9 w-9">
                                 <a 
-                                    href="https://x.com/nuucognition" 
+                                    href="https://x.com/nuu_cognition" 
                                     aria-label="X (Twitter)"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -61,7 +61,7 @@ export function FooterMinimal() {
                             </Button>
                             <Button variant="ghost" size="icon" asChild className="h-9 w-9">
                                 <a 
-                                    href="https://github.com/nuucognition" 
+                                    href="https://github.com/nuu-cognition" 
                                     aria-label="GitHub"
                                     target="_blank"
                                     rel="noopener noreferrer"

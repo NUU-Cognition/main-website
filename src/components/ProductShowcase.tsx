@@ -45,7 +45,6 @@ export function ProductShowcase({
             <Button asChild>
               <a href={link}>
                 {buttonText || `Try ${title} Now`}
-                <ArrowRight className="w-4 h-4 ml-2" />
               </a>
             </Button>
           )}

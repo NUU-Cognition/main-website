@@ -13,7 +13,7 @@ export function MinimalPageHeader({
   className
 }: MinimalPageHeaderProps) {
   return (
-    <div className={cn("pt-32 pb-20", className)}>
+    <div className={cn("pt-32 pb-10", className)}>
       <div className="max-w-6xl mx-auto px-6">
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-light tracking-tight">
           {title}

@@ -29,7 +29,7 @@ export function NavigationMinimal() {
     { href: '/about', label: 'About' },
     // { href: '/ecosystem', label: 'Ecosystem' },
     { href: '/tools', label: 'Tools' },
-    { href: 'https://library.nuucognition.com', label: 'Docs', external: true },
+    // { href: 'https://library.nuucognition.com', label: 'Docs', external: true },
   ]
 
   return (

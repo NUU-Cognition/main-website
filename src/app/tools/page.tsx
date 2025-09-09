@@ -15,28 +15,28 @@ export default function Tools() {
 
             <ContentSection className="pt-0">
                 <div className="mb-4">
-                    <span className="text-xs font-medium uppercase tracking-wider text-foreground/40">Now in Early Access</span>
+                    <span className="text-xs font-medium uppercase tracking-wider text-foreground/40">Featured</span>
                 </div>
                 
                 <ProductShowcase
                     title="NUU Surf"
-                    subtitle="Early Access"
-                    description="A revolutionary way to read and understand documents through multi-layered abstraction. Navigate seamlessly between different levels of detail while maintaining context and accuracy."
+                    subtitle="In Development"
+                    description="A revolutionary way to read and understand documents through multi-layered summaries. Navigate seamlessly between different levels of detail while maintaining context and accuracy."
                     features={[
                         "Multi-layered document navigation with intelligent abstraction",
                         "Context-preserving summaries at every level",
                         "Seamless transitions between detail and overview",
                         "Built for deep understanding, not just skimming"
                     ]}
-                    link="https://library.nuucognition.com"
-                    buttonText="Join Waitlist"
+                    link="https://forms.gle/vYYueKML2t7fgHkU9"
+                    buttonText="Join Early Testing ->"
                 />
             </ContentSection>
 
             <ContentSection className="bg-soft-gray">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-light mb-4">Coming Soon</h2>
-                    <p className="text-lg text-foreground/60">The next generation of cognitive tools</p>
+                    <p className="text-lg text-foreground/60">The next generation of thinking tools</p>
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -56,7 +56,7 @@ export default function Tools() {
                 </div>
             </ContentSection>
 
-            <ContentSection>
+            {/* <ContentSection>
                 <div className="max-w-2xl mx-auto text-center">
                     <h2 className="text-3xl font-light mb-6">Be the first to know</h2>
                     <p className="text-lg text-foreground/60 mb-10">
@@ -69,7 +69,7 @@ export default function Tools() {
                         </a>
                     </Button>
                 </div>
-            </ContentSection>
+            </ContentSection> */}
         </div>
     );
 }
