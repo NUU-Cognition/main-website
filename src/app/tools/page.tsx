@@ -2,8 +2,6 @@ import { ProductShowcase } from '@/components/ProductShowcase'
 import { FutureProductCard } from '@/components/FutureProductCard'
 import { MinimalPageHeader } from '@/components/MinimalPageHeader'
 import { ContentSection } from '@/components/ContentSection'
-import { Button } from '@/components/ui/button'
-import { ArrowRight } from 'lucide-react'
 
 export default function Tools() {
     return (

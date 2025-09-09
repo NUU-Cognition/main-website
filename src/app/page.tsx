@@ -18,7 +18,7 @@ export default function Home() {
 
         <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center items-center">
           <Button asChild>
-            <a href="/tools">Join Early Testing -></a>
+            <a href="/tools">Join Early Testing →</a>
           </Button>
           <Button variant="outline" asChild>
             <a href="/about">Learn more</a>

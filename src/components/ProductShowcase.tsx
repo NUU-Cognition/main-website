@@ -1,7 +1,7 @@
 import React from 'react'
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Zap, Layers, Brain, Sparkles } from "lucide-react"
+import { Zap, Layers, Brain, Sparkles } from "lucide-react"
 
 interface ProductShowcaseProps {
   title: string

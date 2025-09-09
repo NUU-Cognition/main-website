@@ -28,7 +28,6 @@ export function PageHeader({
   primaryCta,
   secondaryCta,
   center = true,
-  showHalo = true,
 }: PageHeaderProps) {
   return (
     <section className="relative pt-32 pb-16 md:pt-40 md:pb-20">

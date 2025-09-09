@@ -38,11 +38,9 @@ import {
   CheckCircle2,
   Brain,
   Layers as LayersIcon,
-  Zap,
   Sparkles,
   Shield,
   Github,
-  Globe,
   Users,
 } from 'lucide-react'
 
@@ -304,7 +302,7 @@ export default function Testing() {
               role={m.role}
               bio={m.bio}
               initials={m.initials}
-              links={m.links as any}
+              links={m.links as Record<string, string>}
             />
           ))}
         </div>
@@ -316,7 +314,7 @@ export default function Testing() {
               name={m.name}
               role={m.role}
               bio={m.bio}
-              links={m.links as any}
+              links={m.links as Record<string, string>}
             />
           ))}
         </div>

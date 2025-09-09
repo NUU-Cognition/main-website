@@ -1,9 +1,8 @@
 import { MinimalPageHeader } from '@/components/MinimalPageHeader'
 import { ContentSection } from '@/components/ContentSection'
 import { FeatureCard } from '@/components/FeatureCard'
-import { SystemCard } from '@/components/SystemCard'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, FileText, Shield, GitBranch, Globe, Cloud, Users, HardDrive, User, Layers, Zap, Sparkles, Lock } from "lucide-react"
+import { ArrowRight, GitBranch, Layers, Sparkles, Lock } from "lucide-react"
 
 export default function Ecosystem() {
     return (

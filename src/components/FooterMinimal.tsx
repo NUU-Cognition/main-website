@@ -11,7 +11,7 @@ export function FooterMinimal() {
                     <div className="md:max-w-md">
                         <h3 className="font-semibold text-lg mb-2">NUU Cognition</h3>
                         <p className="text-sm text-muted-foreground">
-                            We're building the next generation of thinking tools.
+                            We&apos;re building the next generation of thinking tools.
                         </p>
                     </div>
                     
