@@ -119,7 +119,7 @@ export default function Testing() {
       />
 
       {/* UI primitives ---------------------------------------------------- */}
-      <ContentSection id="ui" className="pt-0">
+      <ContentSection className="pt-0">
         <h2 className="text-2xl font-medium mb-6">UI primitives</h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -174,7 +174,7 @@ export default function Testing() {
       </ContentSection>
 
       {/* Headers ----------------------------------------------------------- */}
-      <ContentSection id="headers" className="bg-soft-gray">
+      <ContentSection className="bg-soft-gray">
         <h2 className="text-2xl font-medium mb-6">Headers</h2>
         <div className="space-y-12">
           <div className="border border-border/50 rounded-lg overflow-hidden">
@@ -200,7 +200,7 @@ export default function Testing() {
       </ContentSection>
 
       {/* Cards & content blocks ------------------------------------------- */}
-      <ContentSection id="cards">
+      <ContentSection>
         <h2 className="text-2xl font-medium mb-6">Cards & content blocks</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
@@ -292,7 +292,7 @@ export default function Testing() {
       </ContentSection>
 
       {/* Team blocks ------------------------------------------------------- */}
-      <ContentSection id="teams" className="bg-soft-gray">
+      <ContentSection className="bg-soft-gray">
         <h2 className="text-2xl font-medium mb-6">Team components</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
           {team.map((m) => (
@@ -321,7 +321,7 @@ export default function Testing() {
       </ContentSection>
 
       {/* Visual patterns & effects ---------------------------------------- */}
-      <ContentSection id="effects">
+      <ContentSection>
         <h2 className="text-2xl font-medium mb-6">Visual patterns & effects</h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

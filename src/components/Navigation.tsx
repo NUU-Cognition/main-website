@@ -62,7 +62,7 @@ export function NavigationMinimal() {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-1">
             {navItems.map((item) =>
-              item.external ? (
+              item.href === 'https://library.nuucognition.com' ? (
                 <Button
                   key={item.href}
                   variant="ghost"
@@ -111,7 +111,7 @@ export function NavigationMinimal() {
         <div className="md:hidden border-t border-border/40 bg-background/95 backdrop-blur-md">
           <div className="px-6 py-4 space-y-1">
             {navItems.map((item) =>
-              item.external ? (
+              item.href === 'https://library.nuucognition.com' ? (
                 <a
                   key={item.href}
                   href={item.href}
