@@ -11,8 +11,7 @@ export function FooterMinimal() {
                     <div className="md:col-span-2">
                         <h3 className="font-semibold text-lg mb-2">NUU Cognition</h3>
                         <p className="text-sm text-muted-foreground max-w-sm">
-                            Building tools to augment human thinking through markdown-first, 
-                            local-first, AI-ready software.
+                            We're building the next generation of thinking tools.
                         </p>
                     </div>
                     

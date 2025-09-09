@@ -27,7 +27,7 @@ export function NavigationMinimal() {
   const navItems = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
-    { href: '/ecosystem', label: 'Ecosystem' },
+    // { href: '/ecosystem', label: 'Ecosystem' },
     { href: '/tools', label: 'Tools' },
     { href: 'https://library.nuucognition.com', label: 'Docs', external: true },
   ]

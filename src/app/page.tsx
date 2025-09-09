@@ -1,33 +1,10 @@
 import { Button } from "@/components/ui/button"
-import { FocusHalo } from "@/components/effects/FocusHalo"
-import { StackedLayers } from "@/components/effects/StackedLayers"
-import { IceAurora } from "@/components/effects/IceAurora"
-import { GridGlow } from "@/components/effects/GridGlow"
-import { MeshGradient, DotOrbit } from "@paper-design/shaders-react"
+import { InteractiveHeroBackground } from "@/components/effects/InteractiveHeroBackground"
 
 export default function Home() {
   return (
     <div className="relative h-screen flex items-center justify-center px-6">
-      {/* Grid effect that follows mouse */}
-      {/* <GridGlow /> */}
-
-      {/* Background Effects */}
-      {/* <div className="absolute inset-0 overflow-hidden">
-        <MeshGradient
-          colors={['#e0eaff', '#99c8fa', '#43aaf4']}
-          distortion={0.8}
-          swirl={0}
-          speed={1}
-          style={{
-            position: 'absolute',
-            width: '100%',
-            height: '100%',
-            opacity: 0.5,
-          }}
-          scale={1}
-
-        />
-      </div> */}
+      {/* <InteractiveHeroBackground /> */}
 
       {/* Hero */}
       <div className="relative z-10 max-w-3xl mx-auto text-center">
@@ -41,7 +18,7 @@ export default function Home() {
 
         <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center items-center">
           <Button asChild>
-            <a href="/tools">Join our Early Testing -></a>
+            <a href="/tools">Join our Early Testing -&gt;</a>
           </Button>
           <Button variant="outline" asChild>
             <a href="/about">Learn more</a>

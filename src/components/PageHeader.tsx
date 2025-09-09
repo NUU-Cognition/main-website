@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import { FocusHalo } from "@/components/effects/FocusHalo"
+
 
 interface Cta {
   href: string
@@ -32,7 +32,6 @@ export function PageHeader({
 }: PageHeaderProps) {
   return (
     <section className="relative pt-32 pb-16 md:pt-40 md:pb-20">
-      {showHalo && <FocusHalo />}
       <div className="max-w-6xl mx-auto px-6">
         <div className={cn("w-full", center ? "max-w-3xl mx-auto text-center" : "max-w-3xl")}>
           <div className={cn("flex items-center gap-3", center ? "justify-center" : "justify-start")}>

@@ -10,7 +10,7 @@ export default function Tools() {
         <div className="bg-background">
             <MinimalPageHeader
                 title="Tools that think with you."
-                subtitle="Markdown-first software for reading, understanding, and shaping knowledge. Every tool works alone or together."
+                // subtitle="Markdown-first software for reading, understanding, and shaping knowledge. Every tool works alone or together."
             />
 
             <ContentSection className="pt-0">

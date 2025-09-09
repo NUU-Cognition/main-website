@@ -1,6 +1,6 @@
 // src/app/layout.tsx
 import "./globals.css"
-import { NavigationMinimal } from "@/components/NavigationMinimal"
+import { NavigationMinimal } from "@/components/Navigation"
 import { FooterMinimal } from "@/components/FooterMinimal"
 import { Geist, Geist_Mono } from "next/font/google"
 
