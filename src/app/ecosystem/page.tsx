@@ -79,7 +79,7 @@ export default function Ecosystem() {
                         <div className="text-xs font-medium uppercase tracking-wider text-foreground/40 mb-2">Team</div>
                         <h3 className="text-2xl font-light mb-4">NUU Core</h3>
                         <p className="text-foreground/60 mb-6">
-                            Transform your organization's collective knowledge into a living, breathing system.
+                            Transform your organization&apos;s collective knowledge into a living, breathing system.
                         </p>
                         <ul className="space-y-2 text-sm text-foreground/60">
                             <li className="flex items-center gap-2">

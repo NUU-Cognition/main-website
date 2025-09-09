@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button"
-import { InteractiveHeroBackground } from "@/components/effects/InteractiveHeroBackground"
 
 export default function Home() {
   return (
@@ -13,7 +12,7 @@ export default function Home() {
         </h1>
 
         <p className="mt-4 text-lg md:text-xl text-foreground/60 leading-relaxed max-w-xl mx-auto">
-          We're building the next generation of thinking tools.
+          We&apos;re building the next generation of thinking tools.
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center items-center">
